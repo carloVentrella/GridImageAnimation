@@ -27,7 +27,7 @@ Just call the plugin with an image and set some parameters:
 	                              'speed' : 70, 
 	                              'durationFading' : 200,
 	                              'previewBox' : null,
-	                               complete : function(){}  
+	                               complete : null
 	                            });
 `````
 
