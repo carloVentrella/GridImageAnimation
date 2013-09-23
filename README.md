@@ -22,7 +22,7 @@ Installation
 Just call the plugin with an image and set some parameters:
 
 `````javascript
-	var grid = img.previewImage({ 'mode' : 'fadeIn', 
+	var grid = img.gridImageAnimation({ 'mode' : 'fadeIn', 
 	                              'cell' : 15 , 
 	                              'speed' : 70, 
 	                              'durationFading' : 200,
