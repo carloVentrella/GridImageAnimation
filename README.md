@@ -23,12 +23,12 @@ Just call the plugin with an image and set some parameters:
 
 `````javascript
 	var grid = img.gridImageAnimation({ 'mode' : 'fadeIn', 
-	                              'cell' : 15 , 
-	                              'speed' : 70, 
-	                              'durationFading' : 200,
-	                              'previewBox' : null,
-	                               complete : null
-	                            });
+	                                    'cell' : 15 , 
+	                                    'speed' : 70, 
+	                                    'durationFading' : 200,
+	                                    'previewBox' : null,
+	                                     complete : null
+	                                  });
 `````
 
 - mode : fadeIn() or fadeOut(). In the first one the image appears, in the second one (obvioulsy) it scompares;
@@ -47,6 +47,6 @@ If the original image as an id and/or class/es they will be inherited by the gri
 
 
 
-You can read also the article on my personal blog (italian) : XXX 
+You can read also the article on my personal blog (italian) : http://www.ketek.it/demo/gridImageAnimation/demo.html 
 
 
