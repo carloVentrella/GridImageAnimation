@@ -4,7 +4,10 @@ GridImageAnimations
 This plugin, developed in jQuery, creates the grid of the image and run the animation chosen by the user: fadeIn and fadeOut. 
 It is completely configurable, users can choose the size of the cells of the grid, the speed of the animations, the type of animations etc.
 
-You can run it here : XXXXX
+Demo
+===========================
+
+You can run it here : http://www.ketek.it/demo/gridImageAnimation/demo.html
 
 Files required
 ===========================
