@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<meta name="viewport" content="user-scalable=no, width=400, initial-scale=0.8, maximum-scale=0.8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="HandheldFriendly" content="true" />
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="reset.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42984988-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+
+<style>
+
+html,body{
+	font-family: Helvetica;
+	margin: 0;
+	padding:0;
+}
+h1{
+	font-weight: bold;
+	font-size:50px;
+	margin: 50px auto;
+
+}
+h2{
+	margin: 30px auto;
+	font-weight: bold;
+	font-size: 35px;
+	display: block;
+}
+p{
+	line-height: 25px;
+	margin: 16px auto;
+}
+.header{
+	width: 80%;
+	margin: auto;
+}
+.demos{
+	width: 80%;
+	margin: 100px auto;
+}
+.demo{
+	margin: auto;
+	text-align: left;
+	margin-bottom: 100px;
+}
+.preview, .grid-example {
+	max-width: 400px;
+	margin: auto;
+	display: block;
+}
+.demo-image, .grid{
+	float: left;
+	width: 50%;
+}
+.image{
+	margin-top: 30px;
+}
+.clear{
+	clear: both;
+}
+.run-plugin{
+	text-decoration: none;
+	background-color: #f6d80d;
+	width: 80px;
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border-radius: 13px;
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.rect{
+
+}
+.img1,.img3{
+	opacity: 0;
+}
+@media all and (max-width:1024px){
+	.demo-image{
+		float:none;
+		margin: auto;
+	}
+	.demo-image{
+		margin-top: 50px;
+		width:400px;
+	}
+	.grid{
+		display: none;
+	}
+}
+@media all and (max-width:480px){
+	.preview, .grid-example{
+		max-width: 300px;
+	}
+	.demo-image{
+		margin-top: 50px;
+		width:300px;
+	}
+}
+
+</style>
+
+<script type="text/javascript">
+
+    $(window).load(function(){
+
+    	var img1 = $('.img1');
+    	var img2 = $('.img2');
+    	var img3 = $('.img3');
+
+    	$('.run-plugin').click(function(e){
+
+    		e.preventDefault();
+
+    		if ( $(this).hasClass('complete') ){ return false; } 
+    		
+    		if ( $(this).hasClass('demo1')){
+    			var obj1 = img1.previewImage({ 'mode' : 'fadeIn' , complete : function(){$('.demo1').addClass('complete').html('Complete');}  });
+    		}
+    		else if ( $(this).hasClass('demo2')){
+    			var obj2 = img2.previewImage({ 'cell' : 10,  'speed' : 99,  complete : function(){$('.demo2').addClass('complete').html('Complete');}  });
+    		}
+    		if ( $(this).hasClass('demo3')){
+    			var obj3 = img3.previewImage({ 'mode' : 'fadeIn', 'cell' : 30 , 'speed' : 90, complete : function(){$('.demo3').addClass('complete').html('Complete');}  });
+    		}
+
+    	});
+    	
+
+    });
+
+</script>
+</head>
+
+<body>
+
+	<!-- Title and introduction -->
+	<div class="header">
+		<h1> Grid of image with animation </h1>
+		<p> This plugin, developed in jQuery, creates the grid fo the image and run the animation chosen by the user. 
+			<br />
+			It is completely configurable, users can choose the size of the cells of the grid, the speed of the animations, the type of animations etc.
+		</p>
+		<p>
+			You can find the instructions on github : <a href="">Github - GridImageAnimation</a>
+		</p>
+		<p>
+			On my personal blog there you can find more about it (<strong>italian</strong>) : <a href="">Ketek</a>
+		</p>
+		<div class="git">
+		<img src="Octocat/Octocat_m.png" width="100px" />
+		<iframe src="http://ghbtns.com/github-btn.html?user=carloVentrella&repo=github-buttons&type=fork&count=true"
+		  allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20"></iframe>
+</div>
+	</div>
+
+	<!-- DEMOs -->
+	<div class="demos">
+
+	<div class="demo first">
+
+	    
+
+		<div class="in-action">
+
+			<h2>Demo 1 </h2>
+
+			<div class="params">
+				<p>
+					<strong>Cell: </strong>  10
+				</p>
+				<p>
+					<strong>Speed: </strong>  70
+				</p>
+				<p>
+					<strong>Mode: </strong>  fadeOut
+				</p>
+				<p>
+					<a href="#" class="run-plugin demo1">Run</a>
+				</p>
+			</div>
+
+			<div class="image">
+
+				<div class="grid">
+					<img src="media/grid1.jpg" class="grid-example img" />
+				</div>
+
+				<div class="demo-image">
+					<img src="media/513237831_a2dbeb4885_o_2x.jpg" class="preview img1" />
+				</div>
+					
+				<div class="clear"></div>
+				
+			</div>
+
+		</div>
+		
+
+	</div>
+
+	<div class="demo second">
+
+		<h2>Demo 2 </h2>
+
+		<div class="in-action">
+
+			<div class="params">
+				<p>
+					<strong>Cell: </strong>  1
+				</p>
+				<p>
+					<strong>Speed: </strong>  99
+				</p>
+				<p>
+					<strong>Mode: </strong>  fadeOut
+				</p>
+				<p>
+					<a href="#" class="run-plugin demo2">Run</a>
+				</p>
+			</div>
+
+			<div class="image">
+				<div class="grid">
+					<img src="media/grid2.jpg" class="grid-example img" />
+				</div>
+
+				<div class="demo-image">
+					<img src="media/525282627_662d9a527d_o_2x.jpg" class="preview img2" />
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>
+
+		</div>
+		
+
+	</div>
+
+	<div class="demo third">
+
+		<h2>Demo 3 </h2>
+
+		<div class="in-action">
+
+			<div class="params">
+				<p>
+					<strong>Cell: </strong>  20
+				</p>
+				<p>
+					<strong>Speed: </strong>  90
+				</p>
+				<p>
+					<strong>Mode: </strong>  fadeIn
+				</p>
+				<p>
+					<a href="#" class="run-plugin demo3">Run</a>
+				</p>
+			</div>
+
+			<div class="image">
+				<div class="grid">
+					<img src="media/grid3.jpg" class="grid-example img" />
+				</div>
+				<div class="demo-image">
+					<img src="media/519690623_5eed3a713c_o_2x.jpg" class="preview img3" />
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>
+
+		</div>
+		
+
+	</div>
+
+
+
+	<p>
+		<label class="author-photo"> Photos by <a href="">Sukanto Debnath</a> </label>
+	</p>
+	<p>
+		<label class="author-plugin"> Plugin by <a href="">Carlo Ventrella</a> </label>
+	</p>
+
+	<div class="clear"></div>
+
+	</div>
+
+
+	<style>
+	.social{
+		padding: 0;
+		width:100%;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.social li{
+		display: inline-block;
+		margin: 5px;
+		margin-bottom: 30px;
+	}
+	.git{
+		width:100px;
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: -40px;
+	}
+	.git img{
+		margin-bottom: 10px;
+	}
+	.licenza{
+		font-size: 12px;
+		text-align: center;
+	margin-top: 60px;
+	}
+	.licenza a{
+		color:#d83e26;
+		font-size: 12px;
+	}
+</style>
+
+
+
+<ul class="social">
+	<li>  
+		<div class="fb-like" data-href="http://www.ketek.it/slideshow-con-descrizioni-jquery-e-css3/" data-width="450" data-layout="box_count" data-show-faces="false" data-send="false"></div>
+	</li>
+	<li>
+		<!-- Inserisci questo tag nel punto in cui vuoi che sia visualizzato l'elemento pulsante +1. -->
+		<div class="g-plusone" data-size="tall" data-href="http://www.ketek.it/slideshow-con-descrizioni-jquery-e-css3/"></div>
+
+		<!-- Inserisci questo tag dopo l'ultimo tag di pulsante +1. -->
+		<script type="text/javascript">
+		  window.___gcfg = {lang: 'it'};
+
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po,s);
+		  })();
+		</script>
+	</li>
+	<li>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.ketek.it/slideshow-con-descrizioni-jquery-e-css3/" data-via="CarloVentrella" data-lang="it" data-count="vertical" >Tweet</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</li>
+</ul>
+
+
+<div class="licenza">
+	<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.it"><img alt="Licenza Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Slideshow with descriptions</span> è distribuito con Licenza <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.it">Creative Commons Attribuzione - Condividi allo stesso modo 3.0 Unported</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://goo.gl/CFjRE1" rel="dct:source">http://goo.gl/CFjRE1</a>.	
+</div>
+
+
+<link rel="stylesheet" href="customInput.css">
+    <script type="text/javascript" src="previewImage.js"></script>
+
+
+</body>
+
+</html>
