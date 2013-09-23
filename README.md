@@ -9,7 +9,7 @@ You can run it here : XXXXX
 Files required
 ===========================
 
-- previewImage.js - is the core of the script;
+- previewImage.js : is the core of the script;
 - a reset stylesheet : it's very important to avoid boring disturbs on the grid (I've used this: http://meyerweb.com/eric/tools/css/reset/);
 
 
