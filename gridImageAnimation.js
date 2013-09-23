@@ -5,7 +5,7 @@
         defaults = {
         	mode : null,
             cell : 15 ,
-            speed : 30, // millis
+            speed : 70, // millis
             durationFading : 200, // millis
             previewBox : null,
             complete : null
@@ -56,6 +56,7 @@
         	
         	// With a random id there's no problem when instantiating more than one object
 			this.options.random = Math.floor(Math.random() * 1000); 
+			console.log(this.options.random);
 			// set some vars
 			var image       = this.element;
 			var imageWidth  = image.width();
@@ -153,12 +154,16 @@
         	var countFinished = 0;
         	var delay = this.options.speed;
 
+        	console.log( this.element );
+
         	// create array from 0 to the number of rects
 			var rectArray = [];
 
 			for (var i = 0; i <= this.options.rTot-1 ; i++) {
 			   rectArray.push(i);
 			}
+
+			console.log(this.options.rTot);
 
 			// shuffle array
 			rectArray = this._shuffleArray(rectArray);

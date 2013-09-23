@@ -12,7 +12,7 @@ You can run it here : http://www.ketek.it/demo/gridImageAnimation/demo.html
 Files required
 ===========================
 
-- previewImage.js : is the core of the script;
+- gridImageAnimation.js : is the core of the script;
 - a reset stylesheet : it's very important to avoid boring disturbs on the grid (I've used this: http://meyerweb.com/eric/tools/css/reset/);
 
 
