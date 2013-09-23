@@ -144,13 +144,13 @@ p{
     		if ( $(this).hasClass('complete') ){ return false; } 
     		
     		if ( $(this).hasClass('demo1')){
-    			var obj1 = img1.previewImage({ 'mode' : 'fadeIn' , complete : function(){$('.demo1').addClass('complete').html('Complete');}  });
+    			var obj1 = img1.gridImageAnimation({ 'mode' : 'fadeIn' , complete : function(){$('.demo1').addClass('complete').html('Complete');}  });
     		}
     		else if ( $(this).hasClass('demo2')){
-    			var obj2 = img2.previewImage({ 'cell' : 10,  'speed' : 99,  complete : function(){$('.demo2').addClass('complete').html('Complete');}  });
+    			var obj2 = img2.gridImageAnimation({ 'cell' : 10,  'speed' : 99,  complete : function(){$('.demo2').addClass('complete').html('Complete');}  });
     		}
     		if ( $(this).hasClass('demo3')){
-    			var obj3 = img3.previewImage({ 'mode' : 'fadeIn', 'cell' : 30 , 'speed' : 90, complete : function(){$('.demo3').addClass('complete').html('Complete');}  });
+    			var obj3 = img3.gridImageAnimation({ 'mode' : 'fadeIn', 'cell' : 30 , 'speed' : 90, complete : function(){$('.demo3').addClass('complete').html('Complete');}  });
     		}
 
     	});

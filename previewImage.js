@@ -1,7 +1,7 @@
 ;(function ( $, window, document, undefined ) {
 
     // Create the defaults once
-    var pluginName = 'previewImage',
+    var pluginName = 'gridImageAnimation',
         defaults = {
         	mode : null,
             cell : 15 ,
