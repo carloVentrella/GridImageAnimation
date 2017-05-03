@@ -7,7 +7,7 @@ It is completely configurable, users can choose the size of the cells of the gri
 Demo
 ===========================
 
-You can run it here : http://www.ketek.it/demo/gridImageAnimation/demo.html
+Just download it and open demo.hml
 
 Files required
 ===========================
